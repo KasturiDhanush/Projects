@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BLIGHT DETECTION USING TRANSFER LEARNING</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Include Bulma (if needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <!-- Your custom styles from the Index page -->
+  <style>
+    /* Your custom styles from the Index page */
+    body {
+      background: black url(static/images/peace.jpg) center / cover;
+    }
+
+    .title {
+      font-family: 'Copperplate Gothic', wedge-serif; /* Use the imported font */
+      font-size: 50px; /* Increased font size */
+      text-align: center;
+      color: black;
+      top: 30px ;
+    }
+
+    .subtitle {
+      font-family: 'Roboto', sans-serif; /* Using the imported font for subtitle */
+      font-size: 33px; /* Reduced font size */
+      color: black;
+      text-align: center;
+    }
+
+    .button.is-black {
+      color: black;
+      background-color: white;
+      border-color: black;
+    }
+
+    .button.is-black:hover {
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+ 
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <p class="title">BLIGHT DETECTION USING TRANSFER LEARNING</p><br>
+        <p class="subtitle">Check if your pixie friend is blighted</p>
+        <form action="/classify" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+          <div class="file has-name is-centered">
+            <label class="file-label">
+              <input class="file-input" type="file" id="image" name="image">
+              <span class="file-cta">
+                <span class="file-label">
+                  Upload an image
+                </span>
+              </span>
+              <span class="file-name" id="file-name">
+                No file chosen
+              </span>
+            </label>
+          </div>
+          <br>
+          <input type="submit" value="Scan" class="button is-black" name="image" id="classify_button">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <!-- Content for level item if needed -->
+    </div>
+  </nav>
+
+  <section class="bd-footer-link">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <article class="media notification has-background-white">
+            <div class="media-content">
+              <div class="content">
+                <p class="subsubtitle">
+                  <strong>Contact</strong>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column">
+          <article class="media notification has-background-white">
+            <div class="media-content">
+              <div class="content">
+                <div class="columns">
+                  <!-- Content for second column if needed -->
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your custom script -->
+  <script src="/static/script.js"></script>
+
+</body>
+</html>

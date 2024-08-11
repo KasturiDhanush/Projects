@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLIGHT DETECTION USING TRANSFER LEARNING</title>
+    <class="subtitle" style="color:black">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+
+.hero {
+    background: black url(static/images/clify.jpg) center / cover;
+}
+    </style>
+
+    <style>
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+
+  </head>
+
+    
+<body>
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-black>
+
+    <section class="section">
+        <div class="container" >
+            <h1 class="title" style="font-size:2.5rem">
+              <!-- BLIGHT DETECTION USING TRANSFER LEARNING -->
+            </h1>
+            <!-- <p class="subsubtitle">
+                by <strong>student</strong>
+            </p> -->
+        </div>   
+        </section> 
+
+        <div class="columns">
+                <div class="column is-narrow">
+                </div>
+
+
+                <div class="column is-one-third has-text-centered">
+                  <!-- <figure class="image is-1by1"> -->
+                    <img class="pred_img" src="{{ url_for('send_file', filename=image_file_name)}}"/>
+                  <!-- </figure> -->
+                </div>
+                <div class="column is-one-quarter" style="font-size:2.5rem" >
+      
+                        <h2 id ="pred" style="color:black">
+                          <span style="font-weight: bold; color:black;"> This is affected with <span style="font-weight: bold; color:black;">{{ label }} </span>
+                        </h2>
+            
+                        <h2 style="font-size: 2rem">
+                          <!-- Confidence: <span style="font-weight: bold; color:black;"></span> -->
+                        </h2>
+                        <br>
+                        <a href="/classify" class="button is-black is-inverted is-outlined" style="font-size:1.5rem">Scan Again</a>
+                        <a href="/examples" class="button is-examples" style="font-size:1.5rem">History</a>
+                        
+                          <!-- <button type="submit" class="btn btn-danger">Logout</button> -->
+                        
+                    </div>
+            </div>    
+
+    <section class="section">
+            <div class="container">
+            </div>   
+            </section> 
+        </section>
+<!-- /.hero -->
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
